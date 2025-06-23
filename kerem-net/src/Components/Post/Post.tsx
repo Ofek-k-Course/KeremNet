@@ -16,8 +16,7 @@ interface PostProps{
     }[]
 }
 export default function Post({text, authorName, amountOfLikes, uploadTime, replies}:PostProps):ReactElement {
-    const memoizedDate = useMemo(() => uploadTime.toString().split('GMT')[0],[uploadTime])
-    const memoizedComments = useMemo(() => replies.map(reply => <Reply author={reply.author} text = {reply.text}></Reply>),[])
+    const formattedDate = useMemo(() => uploadTime.toString().split('GMT')[0],[uploadTime])
     return (
         <Box>
             <h2>{authorName}:</h2>
@@ -25,10 +24,11 @@ export default function Post({text, authorName, amountOfLikes, uploadTime, repli
             <Badge color="secondary" badgeContent={amountOfLikes} showZero>
                 <FavoriteBorderIcon />
             </Badge>
-            <h5>{memoizedDate}</h5>
+            <h5>{formattedDate}</h5>
             <div className='comments'>
                 <h2>comments</h2>
-                <List elements={memoizedComments}></List>
+                <List 
+                elements={replies.map(reply => <Reply author={reply.author} text = {reply.text}></Reply>)}/>
             </div>
         </Box>
     )
