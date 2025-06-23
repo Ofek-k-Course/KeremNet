@@ -1,0 +1,36 @@
+[
+    {
+        "text":"First Post EVER on the platform",
+        "authorName":"Ofek",
+        "likes": 6,
+        "uploadTime": "2025-06-23 16:25:32",
+        "replies":[
+            {
+            "author":"oren",
+            "text": "how cool!"
+            },
+            {
+            "author":"keremUser3",
+                "text": "nice!" 
+            }
+            
+        ]
+    },
+    {
+        "text":"how is everyone doing?",
+        "authorName":"oren",
+        "likes": 5,
+        "uploadTime": "2025-06-23 16:28:33",
+        "replies":[
+            {
+            "author":"oren",
+            "text": "test comment"
+            },
+            {
+            "author":"Ofek",
+            "text": "doing fine!" 
+            }
+        ]
+
+    }
+]
