@@ -1,6 +1,5 @@
 import React from 'react';
 import Post from './Components/Post/Post'
-import Reply from './Components/Comment/Reply';
 import './App.css';
 
 function App() {
@@ -8,17 +7,20 @@ function App() {
     <>
     <div className="App">
       <Post authorName='ofek'
-        likes={3}
+        amountOfLikes={3}
         replies = {[
-          <Reply author = 'ofek' >test</Reply>,
-          <Reply author = 'oren' >test2</Reply>,
+          {
+            author: "Ofek",
+            text: "test reply"
+          },
+          {
+            author: "Oren",
+            text: "test reply2"
+          }
         ]}
         text='this is a test text for post by ofek'
         uploadTime={new Date()}></Post>
     </div>
-    
-   
-    
     </>
   );
 }

@@ -1,12 +1,12 @@
 import React, { ReactElement } from 'react'
 import "./List.css"
 
-interface Props{
+interface ListProps{
   elements:ReactElement[]
 }
-export default function RepliesList({elements}:Props) {
+export default function List({elements}:ListProps) {
   return (
-    <div className='List'>
+    <div className='list'>
         {elements}
     </div>
   )
