@@ -1,25 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
+import Post from './Components/Post/Post'
+import Reply from './Components/Comment/Reply';
 import './App.css';
 
 function App() {
   return (
+    <>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Post authorName='ofek'
+        likes={3}
+        replies = {[
+          <Reply author = 'ofek' >test</Reply>,
+          <Reply author = 'oren' >test2</Reply>,
+        ]}
+        text='this is a test text for post by ofek'
+        uploadTime={new Date()}></Post>
     </div>
+    
+   
+    
+    </>
   );
 }
 

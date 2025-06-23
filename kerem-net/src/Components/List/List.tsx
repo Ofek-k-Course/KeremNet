@@ -1,10 +1,13 @@
 import React, { ReactElement } from 'react'
-import "./RepliesList.css"
+import "./List.css"
 
-export default function RepliesList(replies:ReactElement[]) {
+interface Props{
+  elements:ReactElement[]
+}
+export default function RepliesList({elements}:Props) {
   return (
-    <div className='RepliesList'>
-        {replies}
+    <div className='List'>
+        {elements}
     </div>
   )
 }
