@@ -1,10 +1,9 @@
 import { useState , useEffect} from 'react';
-import PostData from '../Models/PostData';
+import postModel from '../Models/post';
 
-
-export default function usePosts():PostData[]{
-    const url = ""
-    const [Posts , setPosts] = useState<PostData[]>([])
+export default function usePosts():postModel[]{
+    const url = "http://localhost:4000"
+    const [Posts , setPosts] = useState<postModel[]>([])
     useEffect(() => {
         fetch(url+'/api/posts', {method: 'GET'})
         
