@@ -12,3 +12,4 @@ app.use('/api/users', userRouter);
 app.listen(port, () => {
   console.log(`listening on port ${port}`)
 })
+
