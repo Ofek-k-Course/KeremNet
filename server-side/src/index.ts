@@ -1,12 +1,16 @@
 import express from 'express'
+
+import postRouter from "./routes/posts"
+import userRouter from "./routes/users"
+
 const app = express()
 const port = 4000
+    
+app.use('/api/posts', postRouter);
+app.use('/api/users', userRouter);
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`listening on port ${port}`)
 })
-  
+
