@@ -5,11 +5,13 @@ import Pages from './Pages/Pages';
 
 function App() {
   return (
+
     <div className="App">
       <Layout/>
       <Pages/>
       
     </div>
+
   );
 }
 export default App;
