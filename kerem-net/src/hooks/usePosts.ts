@@ -1,16 +1,16 @@
 import { useState , useEffect} from 'react';
-import PostData from '../Models/post';
+import postModel from '../Models/post';
 
-
-export default function usePosts():PostData[]{
-    const url = "https://662673e1-d8de-46db-9977-545b509e5eec.mock.pstmn.io"
-    const [Posts , setPosts] = useState<PostData[]>([])
+export default function usePosts():postModel[]{
+    const url = "http://localhost:4000"
+    const [Posts , setPosts] = useState<postModel[]>([])
     useEffect(() => {
         fetch(url+'/api/posts', {method: 'GET'})
+        
         .then((response) => response.json())
         .then((data) => {
-            setPosts(data);
-            console.log(data);});
+            console.log(data);
+            setPosts(data);});
     }, [])
     return Posts
 }

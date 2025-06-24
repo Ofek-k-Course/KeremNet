@@ -1,4 +1,8 @@
-export default interface reply{
-        author:string
+
+import user from "./user"
+
+export default interface replay{
+        id:string
+        author:user
         text:string
     }
