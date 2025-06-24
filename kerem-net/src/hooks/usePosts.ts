@@ -1,15 +1,22 @@
-import { useState } from 'react';
-import data from "../Assets/Posts.json";
-import replay from '../Models/reply';
+import { useState , useEffect} from 'react';
+import reply from '../Models/reply';
 
 
 interface PostData { text: string
     authorName: string
     likes: number
     uploadTime: string
-    replies:replay[]
+    replies:reply[]
 }
+
+
 export default function usePosts():PostData[]{
-    const [Posts] = useState<PostData[]>(data)
+    const url = "https://662673e1-d8de-46db-9977-545b509e5eec.mock.pstmn.io"
+    const [Posts , setPosts] = useState<PostData[]>([])
+    useEffect(() => {
+        fetch(url+'/api/posts', {method: 'GET'})
+        .then((response) => response.json())
+        .then((data) => {setPosts(data)});
+    }, [])
     return (Posts)
 }
