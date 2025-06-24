@@ -16,7 +16,9 @@ export default function usePosts():PostData[]{
     useEffect(() => {
         fetch(url+'/api/posts', {method: 'GET'})
         .then((response) => response.json())
-        .then((data) => {setPosts(data)});
+        .then((data) => {
+            setPosts(data);
+            console.log(data);});
     }, [])
     return (Posts)
 }
