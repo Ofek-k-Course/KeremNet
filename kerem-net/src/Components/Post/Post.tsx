@@ -25,7 +25,7 @@ export default function Post({text, authorName, amountOfLikes, uploadTime, repli
             <div className='comments'>
                 <h2>comments</h2>
                 <List 
-                elements={replies.map(reply => <Reply author={reply.author} text = {reply.text}></Reply>)}/>
+                elements={replies.map(reply => <Reply author={reply.author.name} text = {reply.text}></Reply>)}/>
             </div>
         </Box>
     )

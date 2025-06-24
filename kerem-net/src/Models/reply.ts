@@ -1,4 +1,8 @@
+
+import user from "./user"
+
 export default interface replay{
-        author:string
+        id:string
+        author:user
         text:string
     }

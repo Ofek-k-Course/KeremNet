@@ -1,4 +1,4 @@
-import React, { memo, ReactElement, useMemo} from 'react'
+import React, {ReactElement, useMemo} from 'react'
 import usePosts from '../../hooks/usePosts'
 import Post from '../../Components/Post/Post'
 import List from '../../Components/List/List'
@@ -13,7 +13,7 @@ export const HomePage = ():ReactElement => {
             return (
             <Post 
             text={post.text}
-            authorName={post.authorName}
+            authorName={post.author.name}
             amountOfLikes={post.likes}
             uploadTime={new Date(post.uploadTime)}
             replies = {post.replies} />)
