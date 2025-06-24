@@ -14,7 +14,7 @@ export const HomePage = ():ReactElement => {
             return (
             <Post 
             text={post.text}
-            authorName={post.authorName}
+            authorName={post.author.name}
             amountOfLikes={post.likes}
             uploadTime={new Date(post.uploadTime)}
             replies = {post.replies} />)
