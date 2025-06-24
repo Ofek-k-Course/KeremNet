@@ -2,4 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: fit-content;
+    height: 100%;
+    scroll-behavior: auto;
 }
+
