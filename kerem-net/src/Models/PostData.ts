@@ -1,11 +1,10 @@
-import reply from "./reply"
-
-interface PostData {
+import replay from "./reply"
+import user from "./user"
+export default interface Post { 
+    id: string
     text: string
-    authorName: string
+    author: user
     likes: number
     uploadTime: string
-    replies:reply[]
+    replies:replay[]
 }
-
-export default PostData;
