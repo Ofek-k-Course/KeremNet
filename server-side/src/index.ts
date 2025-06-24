@@ -1,5 +1,4 @@
 import express from 'express'
-
 import postRouter from "./routes/posts"
 import userRouter from "./routes/users"
 
