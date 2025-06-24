@@ -16,5 +16,6 @@ export default function SideBar() {
             <Button className='sidebar-button' variant='outlined'>test</Button>
         </div>
     </div>
+
   )
 }
