@@ -3,9 +3,6 @@ import express, { Request, Response } from "express";
 
 
 const getPosts = (req:Request, res:Response):void => {
-  console.log(posts);
-  console.log("SENDING POSTS");
-  
   res.send(posts);
 }
 
