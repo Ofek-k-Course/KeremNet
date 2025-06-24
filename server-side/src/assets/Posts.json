@@ -321,6 +321,114 @@
             }
         ]
 
+    },
+    {
+        "id": "1",
+        "text":"First Post EVER on the platform",
+        "author":{
+            "id" : "1",
+            "name":"Ofek"
+        },
+        "likes": 6,
+        "uploadTime": "2025-06-23 16:25:32",
+        "replies":[
+            {
+            "author":{
+                "id" : "2",
+                "name":"oren"
+            },
+            "text": "how cool!"
+            },
+            {
+            "author":{
+                "id" : "3",
+                "name":"keremUser"
+            },
+            "text": "nice!" 
+            }
+            
+        ]
+    },
+    {
+        "id": "2",
+        "text":"how is everyone doing?",
+        "author":{
+            "id" : "2",
+            "name":"oren"
+        },
+        "likes": 5,
+        "uploadTime": "2025-06-23 16:28:33",
+        "replies":[
+            {
+            "author":{
+                    "id" : "2",
+                    "name":"oren"
+                },
+            "text": "test comment"
+            },
+            {
+            "author":{
+                    "id" : "1",
+                    "name":"Ofek"
+                },
+            "text": "doing fine!" 
+            }
+        ]
+
+    },
+    {
+        "id": "1",
+        "text":"First Post EVER on the platform",
+        "author":{
+            "id" : "1",
+            "name":"Ofek"
+        },
+        "likes": 6,
+        "uploadTime": "2025-06-23 16:25:32",
+        "replies":[
+            {
+            "author":{
+                "id" : "2",
+                "name":"oren"
+            },
+            "text": "how cool!"
+            },
+            {
+            "author":{
+                "id" : "3",
+                "name":"keremUser"
+            },
+            "text": "nice!" 
+            }
+            
+        ]
+    },
+    {
+        "id": "2",
+        "text":"how is everyone doing?",
+        "author":{
+            "id" : "2",
+            "name":"oren"
+        },
+        "likes": 5,
+        "uploadTime": "2025-06-23 16:28:33",
+        "replies":[
+            {
+            "author":{
+                    "id" : "2",
+                    "name":"oren"
+                },
+            "text": "test comment"
+            },
+            {
+            "author":{
+                    "id" : "1",
+                    "name":"Ofek"
+                },
+            "text": "doing fine!" 
+            }
+        ]
+
     }
 
 ]
