@@ -1,6 +1,6 @@
 import replay from "./reply"
 import user from "./user"
-export default interface Post { 
+export default interface PostData { 
     id: string
     text: string
     author: user
