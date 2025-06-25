@@ -1,6 +1,6 @@
 .MuiBox-root{
     border-radius: 1;
-    background-color: gray;
+    background-color: rgb(220, 215, 215);
     border-radius: 1em;
     border: 2px solid black;
     text-align: left;
@@ -10,9 +10,12 @@
     padding: 0.5em;
     margin: 0.5em;
 }
+.MuiBox-root:hover{
+    background-color: rgb(187, 186, 186) ;
+
+}
 .comments{
     border-radius: 1;
-    background-color: gray;
     border-radius: 1em;
     border: 2px solid black;
     text-align: left;

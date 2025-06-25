@@ -14,10 +14,11 @@ const HomePage = ():ReactElement => {
                     {
                         return (
                         <Post 
+                        id = {post.id}
                         text={post.text}
-                        authorName={post.author.name}
-                        amountOfLikes={post.likes}
-                        uploadTime={new Date(post.uploadTime)}
+                        author={post.author}
+                        likes={post.likes}
+                        uploadTime={post.uploadTime}
                         replies = {post.replies} />)
                     })
                 }></List>
