@@ -1,4 +1,4 @@
-export default interface replay{
+export default interface Reply{
         author:string
         text:string
     }
