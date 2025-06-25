@@ -1,13 +1,14 @@
 import React from 'react';
 import './App.css';
-import { HomePage } from './Pages/HomePage/HomePage';
-import SideBar from './Components/applicationLayout/SideBar/SideBar';
+import Layout from './Components/applicationLayout/Layout';
+import Pages from './Pages/Pages';
 
 function App() {
   return (
     <div className="App">
-      <SideBar></SideBar>
-      <HomePage></HomePage>
+      <Layout/>
+      <Pages/>
+      
     </div>
   );
 }
