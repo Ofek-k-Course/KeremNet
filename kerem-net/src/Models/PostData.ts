@@ -1,6 +1,7 @@
 import reply from "./reply"
 
-interface PostData { text: string
+interface PostData {
+    text: string
     authorName: string
     likes: number
     uploadTime: string
