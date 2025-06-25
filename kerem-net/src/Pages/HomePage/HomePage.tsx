@@ -1,4 +1,4 @@
-import React, { memo, ReactElement, useMemo} from 'react'
+import React, {ReactElement} from 'react'
 import usePosts from '../../hooks/usePosts'
 import Post from '../../Components/Post/Post'
 import List from '../../Components/List/List'
