@@ -1,13 +1,5 @@
 import { useState , useEffect} from 'react';
-import reply from '../Models/reply';
-
-
-interface PostData { text: string
-    authorName: string
-    likes: number
-    uploadTime: string
-    replies:reply[]
-}
+import PostData from '../Models/post';
 
 
 export default function usePosts():PostData[]{
@@ -18,5 +10,5 @@ export default function usePosts():PostData[]{
         .then((response) => response.json())
         .then((data) => {setPosts(data)});
     }, [])
-    return (Posts)
+    return Posts
 }

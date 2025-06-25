@@ -3,12 +3,13 @@ import usePosts from '../../hooks/usePosts'
 import Post from '../../Components/Post/Post'
 import List from '../../Components/List/List'
 import "./HomePage.css"
+import PostData from '../../Models/post';
 
 
 
 export const HomePage = ():ReactElement => {
-    const posts = usePosts()
-    const postElements = useMemo(()=> posts.map((post) => 
+    const posts:PostData[] = usePosts()
+    const postElements = posts.map((post) => 
         {
             return (
             <Post 
@@ -17,7 +18,7 @@ export const HomePage = ():ReactElement => {
             amountOfLikes={post.likes}
             uploadTime={new Date(post.uploadTime)}
             replies = {post.replies} />)
-        }),[posts])
+        })
     return (
         <div className='homepage'>
             <List elements = {postElements}></List>
