@@ -3,7 +3,7 @@ import PostData from '../Models/PostData';
 
 
 export default function usePosts():PostData[]{
-    const url = "https://662673e1-d8de-46db-9977-545b509e5eec.mock.pstmn.io"
+    const url = ""
     const [Posts , setPosts] = useState<PostData[]>([])
     useEffect(() => {
         fetch(url+'/api/posts', {method: 'GET'})
