@@ -4,7 +4,7 @@ import { Badge, Box } from '@mui/material'
 import List from '../List/List'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import Reply from '../Reply/Reply';
-import ReplayModel from "../../Models/Reply"
+import ReplayModel from "../../Models/reply"
 
 interface PostProps{
     text:string

@@ -1,4 +1,4 @@
-import replay from "./Reply"
+import replay from "./reply"
 import user from "./user"
 export default interface PostData { 
     id: string
