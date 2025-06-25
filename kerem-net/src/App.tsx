@@ -1,13 +1,15 @@
 import React from 'react';
 import './App.css';
-import { HomePage } from './Pages/HomePage/HomePage';
+import Layout from './Components/applicationLayout/Layout';
+import Pages from './Pages/Pages';
 
 function App() {
   return (
     <div className="App">
-      <HomePage></HomePage>
+      <Layout/>
+      <Pages/>
+      
     </div>
   );
 }
-
 export default App;

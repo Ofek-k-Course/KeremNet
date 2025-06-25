@@ -2,7 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: red;
-    min-width: 10vw;
-    min-height: 10vh;
+    width: fit-content;
+    height: 100%;
+    scroll-behavior: auto;
 }
+
