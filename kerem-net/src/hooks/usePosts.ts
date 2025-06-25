@@ -1,5 +1,5 @@
 import { useState , useEffect} from 'react';
-import PostData from '../Models/post';
+import PostData from '../Models/PostData';
 
 
 export default function usePosts():PostData[]{

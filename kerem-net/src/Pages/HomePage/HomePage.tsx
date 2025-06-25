@@ -3,7 +3,7 @@ import usePosts from '../../hooks/usePosts'
 import Post from '../../Components/Post/Post'
 import List from '../../Components/List/List'
 import "./HomePage.css"
-import PostData from '../../Models/post';
+import PostData from '../../Models/PostData';
 
 
 
