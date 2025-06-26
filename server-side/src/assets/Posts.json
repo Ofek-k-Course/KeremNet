@@ -58,7 +58,7 @@
 
     },
     {
-        "id": "1",
+        "id": "4",
         "text":"First Post EVER on the platform",
         "author":{
             "id" : "1",
@@ -87,7 +87,7 @@
         ]
     },
         {
-        "id": "1",
+        "id": "5",
         "text":"First Post EVER on the platform",
         "author":{
             "id" : "1",
@@ -116,7 +116,7 @@
         ]
     },
     {
-        "id": "2",
+        "id": "6",
         "text":"how is everyone doing?",
         "author":{
             "id" : "2",
@@ -145,7 +145,7 @@
 
     },
     {
-        "id": "1",
+        "id": "7",
         "text":"First Post EVER on the platform",
         "author":{
             "id" : "1",
