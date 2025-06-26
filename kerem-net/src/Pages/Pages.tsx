@@ -1,8 +1,9 @@
-import React, { ReactElement } from "react";
-import HomePage from "./HomePage/HomePage";
+import { ReactElement } from "react";
 import { Route, Routes } from "react-router-dom";
-import PostPage from "./PostPage/PostPage";
 import "./Pages.css";
+import HomePage from "./HomePage/HomePage";
+import PostPage from "./PostPage/PostPage";
+import AddPostPage from "./AddPostPage/AddPostPage";
 
 export default function page(): ReactElement {
   return (
@@ -10,6 +11,7 @@ export default function page(): ReactElement {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/post/:id" element={<PostPage />} />
+        <Route path="/add-post" element={<AddPostPage />} />
       </Routes>
     </div>
   );

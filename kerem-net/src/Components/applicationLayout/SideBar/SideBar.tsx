@@ -3,7 +3,7 @@ import "./SideBar.css";
 import logo from "../../../Assets/logo.png";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { BugReport, Home } from "@mui/icons-material";
+import { BugReport, Home, AddCircleOutlineOutlined } from "@mui/icons-material";
 export default function SideBar() {
   const navigate = useNavigate();
 
@@ -29,6 +29,14 @@ export default function SideBar() {
           onClick={() => navigate("/test")}
         >
           Test
+        </Button>
+        <Button
+          className="sidebar-button"
+          variant="outlined"
+          startIcon={<AddCircleOutlineOutlined />}
+          onClick={() => navigate("/add-post")}
+        >
+          Create Post
         </Button>
       </div>
     </div>
