@@ -1,0 +1,9 @@
+.add-post-page {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  justify-content: center;
+  align-items: stretch;
+  width: fit-content;
+  height: 100vh;
+}

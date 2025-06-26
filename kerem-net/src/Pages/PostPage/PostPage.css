@@ -2,10 +2,8 @@
   display: flexbox;
   justify-content: center;
   align-items: center;
-  padding: 5%;
   width: fit-content;
   height: 100vh;
-  overflow: hidden;
 }
 .like-icon {
   margin: auto;

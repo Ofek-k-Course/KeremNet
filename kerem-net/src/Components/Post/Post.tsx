@@ -22,7 +22,7 @@ export default function Post({
   };
   return (
     <div onClick={handlePostClick}>
-      <Box>
+      <Box className="post">
         <h2>{author.name}:</h2>
         <h3>{text}</h3>
         <Badge color="secondary" badgeContent={likes} showZero>
