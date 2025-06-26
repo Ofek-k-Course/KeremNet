@@ -1,7 +1,7 @@
-import user from "./User"
+import user from "./User";
 
-export default interface Reply{
-        id:string
-        author:user
-        text:string
+export default interface Reply {
+  id: string;
+  author: user;
+  text: string;
 }
