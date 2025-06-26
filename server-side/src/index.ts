@@ -1,6 +1,6 @@
 import express from 'express'
-import postRouter from "./routes/posts"
-import userRouter from "./routes/users"
+import postRouter from "./Routes/posts"
+import userRouter from "./Routes/users"
 
 const app = express()
 const port = 4000

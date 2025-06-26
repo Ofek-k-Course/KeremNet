@@ -1,15 +1,16 @@
-import express, { Request, Response } from "express";
+import { Request, Response } from "express";
 import users from "../assets/Users.json"
-
+import User from "../Models/User";
 
 const getUsers = (req:Request, res:Response):void =>{
-    res.send(users)
+    res.send(users as User[])
 }
 
 const getUserById = (req:Request, res:Response):void =>{
-  const user = users.find(user => user.id === req.params.id)
+  const user: User | undefined = users.find(user => user.id === req.params.id)
   if (!user){
     res.status(404).send('Post not found');
+    return
   }
   res.send(user);
 }

@@ -1,30 +1,28 @@
-import posts from "../assets/Posts.json";
-import express, { Request, Response } from "express";
+import posts from "../Assets/Posts.json";
+import { Request, Response } from "express";
+import PostData from "../Models/PostData";
 
 
 const getPosts = (req:Request, res:Response):void => {
-  console.log(posts);
-  console.log("SENDING POSTS");
-  
-  res.send(posts);
+  res.send(posts as PostData[]);
 }
 
 const getPostsById = (req:Request, res:Response):void => {
-  const user = posts.find(post => post.id === req.params.id)
-  if (!user){
+  const post : PostData | undefined  = posts.find(post => post.id === req.params.id)
+  if (!post){
     res.status(404).send('Post not found');
     return
   }
-  res.send(user);
+  res.send(post);
 }
 
 const getPostAuthor = (req:Request, res:Response):void =>{
-  const user = posts.find(post => post.id === req.params.id)
-  if (!user){
+  const post : PostData | undefined = posts.find(post => post.id === req.params.id)
+  if (!post){
     res.status(404).send('Post not found');
     return
   }
-  res.send(user.author);
+  res.send(post.author);
 }
 
 export default {
