@@ -5,8 +5,8 @@
     align-items: center;
     padding: 5%;
     width: fit-content;
-    height: 100%;
-    scroll-behavior: auto;
+    height: 100vh;
+    overflow: hidden;
 }
 .like-icon{
     margin: auto;
