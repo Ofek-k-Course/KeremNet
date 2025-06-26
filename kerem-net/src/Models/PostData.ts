@@ -1,4 +1,4 @@
-import replay from "./Reply"
+import reply from "./Reply"
 import user from "./User"
 export default interface PostData { 
     id: string
@@ -6,5 +6,5 @@ export default interface PostData {
     author: user
     likes: number
     uploadTime: string
-    replies:replay[]
+    replies:reply[]
 }

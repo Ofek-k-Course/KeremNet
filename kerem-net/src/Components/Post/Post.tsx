@@ -12,7 +12,7 @@ export default function Post({text, author, likes, id, replies, uploadTime}:Post
     const formattedDate = useMemo(() => uploadTime.split('GMT')[0],[uploadTime])
     const navigate = useNavigate();
     const handlePostClick = () => {
-        navigate(`post/${id}`);
+        navigate(`post/${id}`,{ replace: true });
     };
     return (
         <div onClick = {handlePostClick}>
@@ -27,7 +27,7 @@ export default function Post({text, author, likes, id, replies, uploadTime}:Post
                     <h2>comments</h2>
                     <List 
                     elements={replies.map(reply => 
-                    <Reply author={reply.author.name} 
+                    <Reply author={reply.author} 
                     text = {reply.text}></Reply>)}/>
                 </div>
             </Box>
