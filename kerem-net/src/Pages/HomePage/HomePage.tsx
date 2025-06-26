@@ -1,5 +1,5 @@
 import React, {ReactElement} from 'react'
-import usePosts from '../../hooks/usePosts'
+import usePosts from '../../Hooks/usePosts'
 import Post from '../../Components/Post/Post'
 import List from '../../Components/List/List'
 import "./HomePage.css"
@@ -15,7 +15,7 @@ const HomePage = ():ReactElement => {
                         return (
                         <Post 
                         text={post.text}
-                        authorName={post.authorName}
+                        authorName={post.author.name}
                         amountOfLikes={post.likes}
                         uploadTime={new Date(post.uploadTime)}
                         replies = {post.replies} />)

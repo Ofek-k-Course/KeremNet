@@ -1,7 +1,6 @@
 import user from "./User"
-
-export default interface Reply{
+export default interface replay{
         id:string
         author:user
         text:string
-}
+    }
