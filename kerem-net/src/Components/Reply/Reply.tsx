@@ -1,6 +1,6 @@
 import React from 'react'
 import './Reply.css'
-import User from '../../Models/user'
+import User from '../../Models/User'
 interface ReplyProps{
   author:User
   text:string

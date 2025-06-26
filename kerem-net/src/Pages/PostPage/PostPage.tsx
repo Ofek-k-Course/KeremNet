@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react'
 import "./PostPage.css"
-import usePostById from '../../hooks/usePostById'
+import usePostById from '../../Hooks/usePostById'
 import CircularProgress from '@mui/material/CircularProgress';
 import { useParams } from 'react-router-dom';
 import { Badge } from '@mui/material';
