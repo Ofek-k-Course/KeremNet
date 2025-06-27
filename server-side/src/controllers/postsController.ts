@@ -30,18 +30,14 @@ const getPostAuthor = async (req: Request, res: Response): Promise<void> => {
 
 const addPost = async (req: Request, res: Response): Promise<void> => {
   try {
-    console.log(req);
     const newPost: PostData = req.body;
-    console.log(newPost);
     if (newPost) {
       posts.push(newPost);
-      res.status(201).json({ message: "User registered successfully!" });
-      console.log("new Post Success");
+      res.status(201).json({ message: "post added successfully!" });
     } else {
-      console.log("new post not exists");
+      res.status(500).json({ message: "error adding post" });
     }
   } catch (error) {
-    console.error(error);
     res.status(500).json({ message: "Server error when posting new post" });
   }
 };
