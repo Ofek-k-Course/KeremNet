@@ -8,9 +8,7 @@ export function makeServer({ environment = "development" } = {}) {
     environment: environment,
 
     routes() {
-      this.namespace = "api"; // Optional: Prefix all routes with /api
-
-      // Define a GET route for /api/posts
+      this.namespace = "api";
       this.get("/posts", () => {
         console.log("Mock data sent");
         return data;

@@ -25,14 +25,6 @@ export default function SideBar() {
         <Button
           className="sidebar-button"
           variant="outlined"
-          startIcon={<BugReport />}
-          onClick={() => navigate("/test")}
-        >
-          Test
-        </Button>
-        <Button
-          className="sidebar-button"
-          variant="outlined"
           startIcon={<AddCircleOutlineOutlined />}
           onClick={() => navigate("/add-post")}
         >

@@ -6,7 +6,6 @@ import Status from "../Models/Status";
 export default function usePostById(): HookReturn<
   (data: PostData) => Promise<void>
 > {
-  /* returns undefined when object has not been loaded yet */
   const [Status, setStatus] = useState<Status>("Loading");
   const [Error, setError] = useState<string | undefined>(undefined);
 
