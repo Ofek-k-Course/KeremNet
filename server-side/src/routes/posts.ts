@@ -5,5 +5,5 @@ const postRouter = express.Router();
 postRouter.get("/", postController.getPosts);
 postRouter.get("/:id", postController.getPostsById);
 postRouter.get("/:id/author", postController.getPostAuthor);
-postRouter.post("/add-post", postController.addPost);
+postRouter.post("/", postController.addPost);
 export default postRouter;

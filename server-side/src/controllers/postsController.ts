@@ -30,9 +30,12 @@ const getPostAuthor = async (req: Request, res: Response): Promise<void> => {
 
 const addPost = async (req: Request, res: Response): Promise<void> => {
   try {
+    console.log(req.body);
+
     const newPost: PostData = req.body;
     posts.push(newPost);
     res.status(201).json({ message: "User registered successfully!" });
+    console.log("new Post Success");
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Server error when posting new post" });
