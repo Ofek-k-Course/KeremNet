@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState } from "react";
 import PostData from "../Models/PostData";
 import url from "../Assets/KeremNetUrl";
 import HookReturn from "../Models/HookReturn";
@@ -10,14 +10,14 @@ export default function usePostById(): HookReturn<
   const [Status, setStatus] = useState<Status>("Loading");
   const [Error, setError] = useState<string | undefined>(undefined);
 
-  const handlePost = useCallback(async (data: PostData) => {
-    const requestOptions = {
+  const handlePost = async (data: PostData) => {
+    await fetch(url + "/api/posts", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    };
-
-    await fetch(url + "/api/add-post", requestOptions)
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ ...data }),
+    })
       .then((response) => response.json())
       .then(() => {
         setStatus("Success");
@@ -26,6 +26,7 @@ export default function usePostById(): HookReturn<
         setStatus("Error");
         setError(String(error));
       });
-  }, []);
+  };
+
   return { data: handlePost, error: Error, status: Status };
 }

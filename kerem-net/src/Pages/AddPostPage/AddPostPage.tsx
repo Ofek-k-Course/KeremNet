@@ -5,14 +5,16 @@ import useAddPost from "../../Hooks/useAddPost";
 import PostData from "../../Models/PostData";
 import ErrorToast from "../../Components/ErrorToast/ErrorToast";
 import { v4 as uuidv4 } from "uuid";
+import { useNavigate } from "react-router-dom";
 
 export default function AddPostPage(): ReactElement {
   const { data: sendData, error, status } = useAddPost();
   const [name, setName] = useState<string>("");
   const [id, setId] = useState<string>();
   const [text, setText] = useState<string>("");
+  const navigate = useNavigate();
 
-  const HandlePost = () => {
+  const HandlePost = async () => {
     if (!name || !id || !text) {
       ErrorToast("All Post entries need to be filled");
       return;
@@ -25,12 +27,14 @@ export default function AddPostPage(): ReactElement {
       text: text,
       uploadTime: new Date().toUTCString(),
     };
-
-    sendData(post);
+    await sendData(post);
   };
 
   if (status === "Error") {
     ErrorToast(error);
+  }
+  if (status === "Success") {
+    navigate("/");
   }
   return (
     <Box className="add-post-page">
@@ -41,7 +45,6 @@ export default function AddPostPage(): ReactElement {
         label="Name"
         variant="outlined"
         size="small"
-        value={name}
         onChange={(e) => setName(e.target.value)}
       />
       <TextField
@@ -50,7 +53,6 @@ export default function AddPostPage(): ReactElement {
         variant="outlined"
         size="small"
         className="post-input"
-        value={id}
         onChange={(e) => setId(e.target.value)}
       />
       <TextField
@@ -59,7 +61,6 @@ export default function AddPostPage(): ReactElement {
         label="Multiline Placeholder"
         placeholder="Placeholder"
         multiline
-        value={text}
         onChange={(e) => setText(e.target.value)}
       />
       <Button
