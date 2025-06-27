@@ -3,14 +3,15 @@ import PostData from "../Models/PostData";
 import url from "../Assets/KeremNetUrl";
 import HookReturn from "../Models/HookReturn";
 import Status from "../Models/Status";
-
-export default function usePosts(): HookReturn<PostData[] | undefined> {
+export default function usePostById(
+  id: string
+): HookReturn<PostData | undefined> {
   /* returns undefined when object has not been loaded yet */
-  const [Posts, setPosts] = useState<PostData[] | undefined>(undefined);
+  const [Post, setPosts] = useState<PostData | undefined>(undefined);
   const [Status, setStatus] = useState<Status>("Loading");
   const [Error, setError] = useState<string | undefined>(undefined);
   useEffect(() => {
-    fetch(url + "/api/posts", { method: "GET" })
+    fetch(url + "/api/posts/" + id, { method: "GET" })
       .then((response) => response.json())
       .then((data) => {
         setStatus("Success");
@@ -20,6 +21,6 @@ export default function usePosts(): HookReturn<PostData[] | undefined> {
         setStatus("Error");
         setError(String(error));
       });
-  }, []);
-  return { data: Posts, error: Error, status: Status };
+  }, [id]);
+  return { data: Post, error: Error, status: Status };
 }
