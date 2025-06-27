@@ -1,17 +1,12 @@
-import React from 'react';
-import './App.css';
-import Layout from './Components/ApplicationLayout/Layout';
-import Pages from './Pages/Pages';
+import React from "react";
+import "./App.css";
+import Layout from "./Components/ApplicationLayout/Layout";
 
 function App() {
   return (
-
     <div className="App">
-      <Layout/>
-      <Pages/>
-      
+      <Layout />
     </div>
-
   );
 }
 export default App;

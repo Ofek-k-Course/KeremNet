@@ -1,26 +1,26 @@
 [
-    {
-        "id": "123456",
-        "name": "Ofek Tal"
-    },
-    {
-        "id": "1242356",
-        "name": "Oren Tal"
-    },
-      {
-        "id": "546436",
-        "name": "koralos"
-    },
-    {
-        "id": "765432",
-        "name": "ido one"
-    },
-      {
-        "id": "098765",
-        "name": "ido two"
-    },
-    {
-        "id": "065678",
-        "name": "ido three"
-    }
+  {
+    "id": "123456",
+    "name": "Ofek Tal"
+  },
+  {
+    "id": "1242356",
+    "name": "Oren Tal"
+  },
+  {
+    "id": "546436",
+    "name": "koralos"
+  },
+  {
+    "id": "765432",
+    "name": "ido one"
+  },
+  {
+    "id": "098765",
+    "name": "ido two"
+  },
+  {
+    "id": "065678",
+    "name": "ido three"
+  }
 ]

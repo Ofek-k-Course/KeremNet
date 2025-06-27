@@ -1,6 +1,6 @@
-import user from "./User"
-export default interface replay{
-        id:string
-        author:user
-        text:string
-    }
+import user from "./User";
+export default interface reply {
+  id: string;
+  author: user;
+  text: string;
+}

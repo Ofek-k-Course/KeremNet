@@ -1,9 +1,9 @@
-import express from 'express'
-import postController from "../controllers/postsController"
+import express from "express";
+import postController from "../Controllers/postsController";
 
 const postRouter = express.Router();
-postRouter.get('/', postController.getPosts)
-postRouter.get('/:id',postController.getPostsById )
-postRouter.get('/:id/author', postController.getPostAuthor)
+postRouter.get("/", postController.getPosts);
+postRouter.get("/:id", postController.getPostsById);
+postRouter.get("/:id/author", postController.getPostAuthor);
 
-export default postRouter
+export default postRouter;

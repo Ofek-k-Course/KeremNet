@@ -1,9 +1,10 @@
-.homepage{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-    height: 100%;
-    scroll-behavior: auto;
+.homepage {
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: 100vh;
+  top: 0px;
+  scroll-behavior: auto;
+  overflow-y: scroll;
 }
-
